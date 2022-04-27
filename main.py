@@ -10,10 +10,10 @@ def scrape(url):
     print("finished", url, "time taken:", duration, "seconds")
     return url, duration
   
-urls = ["a.com", "b.com", "c.com", "d.com"]
+urls = ["a.com", "b.com", "c.com", "d.com", "e.com", "f.com", "g.com", "h.com"]
 
 if __name__ == "__main__":
-    pool = Pool(processes=4)
+    pool = Pool(processes=2)
     data = pool.map(scrape, urls)
     pool.close()    
     print()
